@@ -1,0 +1,79 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Kor API",
+    "version": "1.0.0",
+    "description": "Visszaadja egy megadott userID-hez tartozó életkort. A válasz csak egy szám, pl. 42."
+  },
+  "servers": [
+    {
+      "url": "https://18ebb544-01fe-445e-8231-ec22d69582a5-00-2vrc4klifayk1.janeway.replit.dev"
+    }
+  ],
+  "paths": {
+    "/get_kor": {
+      "post": {
+        "operationId": "getKor",
+        "summary": "Felhasználó életkorának lekérdezése",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["api_key", "userID"],
+                "properties": {
+                  "api_key": {
+                    "type": "string",
+                    "description": "Az API-kulcs",
+                    "example": "mysecretkey123",
+                    "default": "mysecretkey123"
+                  },
+                  "userID": {
+                    "type": "string",
+                    "description": "A felhasználó azonosítója"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Sikeres válasz: a felhasználó életkora",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "example": 42
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Hibás API-kulcs",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "example": "hibás-api-key"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Nem létező userID",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "example": "userID nem létezik"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
