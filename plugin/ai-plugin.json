@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "korapi",
+  "name_for_model": "korapi",
+  "description_for_human": "Felhasználó korának lekérdezése.",
+  "description_for_model": "Lekérdezi egy felhasználó életkorát a userID alapján.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://18ebb544-01fe-445e-8231-ec22d69582a5-00-2vrc4klifayk1.janeway.replit.dev/openapi.json"
+  },
+  "logo_url": "https://openai.com/favicon.ico",
+  "contact_email": "frici7511@gmail.com",
+  "legal_info_url": "https://policies.google.com/privacy?hl=hu"
+}
