@@ -38,5 +38,9 @@ def serve_plugin_manifest():
     return send_from_directory("plugin", "ai-plugin.json", mimetype="application/json")
 
 # 7. alkalmazás indítása (Replit automatikusan hívja)
+@app.route("/")
+def index():
+    return "korapi online", 200
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
