@@ -1,13 +1,13 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "Kor API",
+    "title": "korapi",
     "version": "1.0.0",
-    "description": "Visszaadja egy megadott userID-hez tartozó életkort. A válasz csak egy szám, pl. 42."
+    "description": "Felhasználó korának lekérdezése userID alapján."
   },
   "servers": [
     {
-      "url": "https://kor-api.onrender.com"
+      "url": "https://18ebb544-01fe-445e-8231-ec22d69582a5-00-2vrc4klifayk1.janeway.replit.dev"
     }
   ],
   "paths": {
@@ -25,13 +25,14 @@
                 "properties": {
                   "api_key": {
                     "type": "string",
-                    "description": "Az API-kulcs",
+                    "description": "API kulcs",
                     "example": "mysecretkey123",
                     "default": "mysecretkey123"
                   },
                   "userID": {
                     "type": "string",
-                    "description": "A felhasználó azonosítója"
+                    "description": "Felhasználó azonosítója",
+                    "example": "u123"
                   }
                 }
               }
@@ -40,7 +41,7 @@
         },
         "responses": {
           "200": {
-            "description": "Sikeres válasz: a felhasználó életkora",
+            "description": "A felhasználó életkora",
             "content": {
               "application/json": {
                 "schema": {
@@ -62,7 +63,7 @@
             }
           },
           "404": {
-            "description": "Nem létező userID",
+            "description": "userID nem található",
             "content": {
               "application/json": {
                 "schema": {
