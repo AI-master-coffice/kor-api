@@ -3,7 +3,7 @@
   "info": {
     "title": "korapi",
     "version": "1.0.0",
-    "description": "Felhasználó korának lekérdezése userID alapján."
+    "description": "felhasználó korának lekérdezése userID alapján."
   },
   "servers": [
     {
