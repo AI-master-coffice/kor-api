@@ -13,7 +13,7 @@
   "paths": {
     "/get_kor": {
       "post": {
-        "operationId": "getKor",
+        "operationId": "get_kor",
         "summary": "Felhasználó életkorának lekérdezése",
         "requestBody": {
           "required": true,
