@@ -19,7 +19,7 @@ def get_kor():
         return jsonify("hibás-api-key"), 403
 
     user_id = data["userID"]
-    with open("users.csv", newline="", encoding="utf-8") as csvfile:
+    with open(os.path.join(app.root_path, "users.csv"), newline="", encoding="utf-8") as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
             if row["userID"] == user_id:
