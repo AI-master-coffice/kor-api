@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python alapok - oktatás és teszt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Python alapok - Oktatás</h1>
+    <section id="tutorial">
+        <h2>Változók és típusok</h2>
+        <p>Pythonban a változók típusát nem kell előre megadni. Egyszerű értékadással hozhatunk létre változókat, például <code>x = 5</code>.</p>
+        <h2>Ciklusok</h2>
+        <p>Leggyakrabban <code>for</code> és <code>while</code> ciklusokat használunk. A <code>for</code> ciklus sorozatok bejárására alkalmas, míg a <code>while</code> ciklus addig fut, amíg a feltétel igaz.</p>
+        <h2>Függvények</h2>
+        <p>Függvényt a <code>def</code> kulcsszóval definiálunk. Például: <code>def osszeg(a, b): return a + b</code>.</p>
+    </section>
+
+    <section id="quiz">
+        <h2>Teszt</h2>
+        <form id="quiz-form">
+            <div class="question" id="q1">
+                <p>1. Hogyan hozunk létre változót Pythonban?</p>
+                <label><input type="radio" name="q1" value="a"> int x = 5;</label><br>
+                <label><input type="radio" name="q1" value="b"> x := 5</label><br>
+                <label><input type="radio" name="q1" value="c"> x = 5</label>
+            </div>
+            <div class="question" id="q2">
+                <p>2. Melyik ciklus típus jár be egy sorozatot elemről elemre?</p>
+                <label><input type="radio" name="q2" value="a"> while ciklus</label><br>
+                <label><input type="radio" name="q2" value="b"> for ciklus</label><br>
+                <label><input type="radio" name="q2" value="c"> goto ciklus</label>
+            </div>
+            <div class="question" id="q3">
+                <p>3. Mi a függvénydefiniálás kulcsszava Pythonban?</p>
+                <label><input type="radio" name="q3" value="a"> func</label><br>
+                <label><input type="radio" name="q3" value="b"> def</label><br>
+                <label><input type="radio" name="q3" value="c"> function</label>
+            </div>
+            <button type="submit">Teszt kiértékelése</button>
+        </form>
+    </section>
+
+    <section id="results"></section>
+
+    <script src="script.js"></script>
+</body>
+</html>
